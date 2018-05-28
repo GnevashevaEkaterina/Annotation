@@ -13,6 +13,8 @@ public class Main {
         System.out.println('\n' + versionedClass.getName() + ':');
         System.out.println("Version: " + annotation.value());
         System.out.println("Author: " +  annotation.author());
-        System.out.println("Creation Date: " + annotation.creationDate());
+        Date date = annotation.creationDate();
+        System.out.println(String.format("Creation Date: %d.%d.%d", date.day(), date.month(), date.year()));
+       
     }
 }
